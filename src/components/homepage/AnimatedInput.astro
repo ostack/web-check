@@ -17,10 +17,10 @@ const placeholders = [
     id="url-input"
     type="url"
     name="url"
-    placeholder="E.g. duck.com"
+    placeholder="Enter a URL to start,E.g. duck.com"
   />
   <div class="placeholder-container">
-    <span class="starter" aria-hidden="true">E.g.</span>
+    <span class="starter" aria-hidden="true">Enter a URL to start,E.g.</span>
     {placeholders.map((placeholder, index) => (
       <span class={`placeholder ${index === 0 ? 'active' : ''}`} aria-hidden="true">{placeholder}</span>
     ))}
