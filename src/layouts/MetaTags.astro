@@ -1,5 +1,9 @@
 ---
-declare const window: any;
+declare global {
+    interface Window {
+        $microWidgetProps: any;
+    }
+}
 
 interface Props {
 	title?: string;
