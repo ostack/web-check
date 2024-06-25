@@ -138,7 +138,7 @@ const SiteFeaturesWrapper = styled(StyledCard)`
 `;
 
 const Home = (): JSX.Element => {
-  const defaultPlaceholder = 'e.g. https://duck.com/';
+  const defaultPlaceholder = 'e.g. duck.com';
   const [userInput, setUserInput] = useState('');
   const [errorMsg, setErrMsg] = useState('');
   const [placeholder] = useState(defaultPlaceholder);
@@ -167,9 +167,9 @@ const Home = (): JSX.Element => {
       setErrMsg('Must be a valid URL, IPv4 or IPv6 Address');
     } else {
       // if the addressType is 'url' and address doesn't start with 'http://' or 'https://', prepend 'https://'
-      if (addressType === 'url' && !/^https?:\/\//i.test(address)) {
-        address = 'https://' + address;
-      }
+      //if (addressType === 'url' && !/^https?:\/\//i.test(address)) {
+        //address = 'https://' + address;
+      //}
       const resultRouteParams: NavigateOptions = { state: { address, addressType } };
       navigate(`/check/${encodeURIComponent(address)}`, resultRouteParams);
     }
@@ -220,9 +220,10 @@ const Home = (): JSX.Element => {
         <a href="/">
           <Heading as="h1" size="xLarge" align="center" color={colors.primary}>
             <img width="64" src="/web-check.png" alt="Web Check Icon" />
-            Web Check
+            Web Analyze
           </Heading>
         </a>
+        <h3>WebSite Analyze,An Usefull Security Analyze tool for WebSite Owner.Wegive you X-RayVision for your Website</h3>
         <Input
           id="user-input"
           value={userInput}
@@ -239,7 +240,7 @@ const Home = (): JSX.Element => {
         { errorMsg && <ErrorMessage>{errorMsg}</ErrorMessage>}
         <Button type="submit" styles="width: calc(100% - 1rem);" size="large" onClick={submit}>Analyze!</Button>
       </UserInputMain>
-      <SponsorCard>
+      {/*<SponsorCard>
         <Heading as="h2" size="small" color={colors.primary}>Sponsored by</Heading>
         <div className="inner">
           <p>
@@ -272,7 +273,7 @@ const Home = (): JSX.Element => {
           </a>
         </div>
 
-      </SponsorCard>
+      </SponsorCard>*/}
       <SiteFeaturesWrapper>
         <div className="features">
           <Heading as="h2" size="small" color={colors.primary}>Supported Checks</Heading>
