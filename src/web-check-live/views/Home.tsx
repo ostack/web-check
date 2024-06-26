@@ -223,7 +223,7 @@ const Home = (): JSX.Element => {
             Web Analyze
           </Heading>
         </a>
-        <div style="text-align: center;">An Usefull Security Analyze tool for WebSite Owner.We give you X-Ray Vision for your Website</div>
+        <div align="center">An Usefull Security Analyze tool for WebSite Owner.We give you X-Ray Vision for your Website</div>
         <Input
           id="user-input"
           value={userInput}
