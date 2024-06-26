@@ -138,7 +138,7 @@ const SiteFeaturesWrapper = styled(StyledCard)`
 `;
 
 const Home = (): JSX.Element => {
-  const defaultPlaceholder = 'e.g. duck.com';
+  const defaultPlaceholder = 'Enter a URL. e.g. duck.com';
   const [userInput, setUserInput] = useState('');
   const [errorMsg, setErrMsg] = useState('');
   const [placeholder] = useState(defaultPlaceholder);
@@ -223,11 +223,10 @@ const Home = (): JSX.Element => {
             Web Analyze
           </Heading>
         </a>
-        <div >An Usefull Security Analyze tool for WebSite Owner.We give you X-Ray Vision for your Website</div>
+        <div style="text-align: center;">An Usefull Security Analyze tool for WebSite Owner.We give you X-Ray Vision for your Website</div>
         <Input
           id="user-input"
           value={userInput}
-          label="Enter a URL"
           size="large"
           orientation="vertical"
           name="url"
